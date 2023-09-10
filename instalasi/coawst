@@ -116,6 +116,24 @@ mv coawstM coawstM.sandy
 
 $5. Run Sandy Case
 cd ${HOME}/COAWST
+cp /opt/ohpc/pub/examples/slurm/job.mpi .
+gedit job.mpi
+
+===============================================================================================
+      1 #!/bin/bash
+      2
+      3 #SBATCH -J coawst.sandy               # Job name
+      4 #SBATCH -o coawst_sandy.log           # Name of stdout output file (%j expands to jobId)
+      5 #SBATCH -N 1                          # Total number of nodes requested
+      6 #SBATCH -n 3                          # Total number of mpi tasks requested
+      7 #SBATCH -t 01:30:00                   # Run time (hh:mm:ss) - 1.5 hours
+      8
+      9 ml restore coa_mod
+     10 cd ${HOME}/COAWST
+     11 # Launch MPI-based executable
+     12 mpirun ./coawstM.sandy Projects/Sandy/coupling_sandy.in > cwst_sandy.out
+==============================================================================================
+
 ln -sf  Projects/Sandy/namelist.input .
 ln -sf  Projects/Sandy/wrfbdy_d01 .
 ln -sf  Projects/Sandy/wrfinput_d0* .
@@ -123,3 +141,5 @@ ln -sf  Projects/Sandy/wrflowinp_d0* .
 ln -sf WRF/run/RRTM* .
 ln -sf WRF/run/ozone* .
 ln -sf WRF/run/*.TBL .
+
+sbatch job.mpi
