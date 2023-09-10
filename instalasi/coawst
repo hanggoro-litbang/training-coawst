@@ -113,3 +113,13 @@ script build.log
 exit
 
 mv coawstM coawstM.sandy
+
+$5. Run Sandy Case
+324  ln -sf  Projects/Sandy/namelist.input .
+  325  ln -sf  Projects/Sandy/wrfbdy_d01 .
+  326  ln -sf  Projects/Sandy/wrfinput_d0* .
+  327  ln -sf  Projects/Sandy/wrflowinp_d0* .
+  328  ls
+  329  ln -sf WRF/run/RRTM* .
+  330  ln -sf WRF/run/ozone* .
+  331  ln -sf WRF/run/*.TBL .
