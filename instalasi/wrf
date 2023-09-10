@@ -1,0 +1,34 @@
+###### INSTALASI WRF ######
+#pastikan semua module sudah terload
+#ml list
+#jika tidak gunakan perintah 'ml restore coa_mod'
+#1. Copy file
+#pastikan ada di $HOME masing-masing
+mkdir WRF
+cd WRF
+cp ${TRAIN_DIR}/software/WRF-4.2.tar.gz .
+
+#2. uncompress file
+tar -zxvf WRF-4.2.tar.gz
+cd WRF-4.2
+
+#3. exporting path
+export NETCDF=/opt/ohpc/pub/apps/netcdf-4.7.3
+export WRF_EM_CORE=1
+export NETCDF4=1
+export HDF5=/opt/ohpc/pub/apps/hdf5-1.10.4
+export jasper=/opt/ohpc/pub/apps/jasper-1.900.1
+export JASPERLIB=/opt/ohpc/pub/apps/jasper-1.900.1/lib
+export JASPERINC=/opt/ohpc/pub/apps/jasper-1.900.1/include
+export WRF_DA_CORE=0
+export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+export MCT_INCDIR=${HOME}/COAWST/MCT-LIB/include
+export MCT_LIBDIR=${HOME}/COAWST/MCT-LIB/lib
+
+#4. compile
+./configure
+# pilih 34 dmpar gfortran
+# pilih 1 basic
+./compile em_real >& compile.log &
+#check jika terdapat error pada file compile.log
+
