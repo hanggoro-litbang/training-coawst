@@ -18,5 +18,6 @@ export WRFIO_NCD_LARGE_FILE_SUPPORT=1
 
 #3. compile
 ./configure 4dvar
+#pilih 18 dmpar gfortran
 ./compile -j 10 all_wrfvar >& compile.log &
 # wrfda v 4.3.3 should compile with single proc
