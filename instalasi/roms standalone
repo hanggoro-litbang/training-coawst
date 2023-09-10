@@ -8,6 +8,7 @@ mkdir Roms_only
 cd Roms_only
 mkdir input output
 cp ${HOME}/COAWST/coawst.bash .
+cp ${HOME}/COAWST/Projects/Ducknc/ducknc.h roms_only.h
 
 gedit coawst.bash
 
