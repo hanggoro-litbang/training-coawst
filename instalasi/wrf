@@ -29,6 +29,6 @@ export MCT_LIBDIR=${HOME}/COAWST/MCT-LIB/lib
 ./configure
 # pilih 34 dmpar gfortran
 # pilih 1 basic
-./compile em_real >& compile.log &
+./compile em_real -j 10 >& compile.log &
 #check jika terdapat error pada file compile.log
 
