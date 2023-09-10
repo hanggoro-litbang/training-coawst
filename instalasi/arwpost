@@ -1,0 +1,20 @@
+###### INSTALASI ARWPOST ######
+#pastikan semua module sudah terload
+#ml list
+#jika tidak gunakan perintah 'ml restore coa_mod'
+#1. Copy file
+#pastikan ada di $HOME masing-masing
+cd WRF
+cp ${TRAIN_DIR}/software/ARWpost_V3.tar.gz .
+
+#2. uncompress file
+tar -zxvf ARWpost_V3.tar.gz
+cd ARWpost
+
+#3. exporting path
+export NETCDF=/opt/ohpc/pub/apps/netcdf-4.7.3
+
+#4. compile
+./configure
+# edit file src/Makefile add –lnetcdff
+./compile
