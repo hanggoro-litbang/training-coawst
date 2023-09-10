@@ -16,5 +16,26 @@ export NETCDF=/opt/ohpc/pub/apps/netcdf-4.7.3
 
 #4. compile
 ./configure
+#pilih 3 gfortran
+
+gedit src/Makefile
+
+=================================================================
+     17 ARWpost.exe: $(OBJS)
+     18         $(FC) $(FFLAGS) $(LDFLAGS) -o $@ $(OBJS)  \
+     19                 -L$(NETCDF)/lib -I$(NETCDF)/include  -lnetcdf -lnetcdff
+=================================================================
 # edit file src/Makefile add –lnetcdff
+
 ./compile
+
+#Error: Invalid character in name at (1)
+./clean
+gedit configure.arwp
+
+===================================================================
+     36 CC              =       gcc
+     37 CFLAGS          =       -m64
+     38 CPP             =       /lib/cpp -P -traditional
+     39 CPPFLAGS        =       -DIO_NETCDF -DIO_GRIB1 -DIO_BINARY -DRECL4  -Dbytesw
+===================================================================
