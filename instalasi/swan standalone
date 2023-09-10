@@ -1,0 +1,59 @@
+###### INSTALASI SWAN STANDALONE ######
+#1. Preparation
+cd ${HOME}/COAWST
+
+#2. create working dir
+cd ${HOME}/COAWST/Projects
+mkdir Swan_only
+cd Swan_only
+mkdir input output
+cp ${HOME}/COAWST/coawst.bash .
+cp ${HOME}/COAWST/Projects/Inlet_test/Swanonly swan_only.h
+
+gedit coawst.bash
+
+=================================================================================
+    121 # Set the CPP option defining the particular application. This will
+    122 # determine the name of the ".h" header file with the application
+    123 # CPP definitions. Also this will activate the switch file for WW3.
+    124 export   COAWST_APPLICATION=SWAN_ONLY
+...
+...
+    130 # Set a local environmental variable to define the path to the directories
+    131 # where all this project's files are kept.
+    132 export   MY_ROOT_DIR=${HOME}/COAWST
+    133 export   MY_PROJECT_DIR=${MY_ROOT_DIR}
+...
+...
+    162 #export   NETCDF_CONFIG=${NETCDF_LIBDIR}/../bin/nc-config
+    163 #    This may require nf-config, depending on your system.
+    164 export   NETCDF_CONFIG=/opt/ohpc/pub/apps/netcdf-4.7.3/bin/nf-config
+    165 #export   NETCDF_CONFIG=/vortexfs1/apps/impistack-1.0/bin/nf-config
+...
+...
+    212 #export              FORT=ifort
+    213 export              FORT=gfortran
+    214 #export              FORT=pgi
+...
+...
+    455 #  export     MY_HEADER_DIR=${MY_PROJECT_DIR}/ROMS/Include
+    456 #  export MY_ANALYTICAL_DIR=${MY_PROJECT_DIR}/ROMS/Functionals
+    457    export     MY_HEADER_DIR=${MY_PROJECT_DIR}/Projects/Swan_only
+    458    export MY_ANALYTICAL_DIR=${MY_PROJECT_DIR}/Projects/Swan_only
+====================================================================================
+
+export NETCDF=/opt/ohpc/pub/apps/netcdf-4.7.3
+export WRF_EM_CORE=1
+export NETCDF4=1
+export HDF5=/opt/ohpc/pub/apps/hdf5-1.10.4
+export jasper=/opt/ohpc/pub/apps/jasper-1.900.1
+export JASPERLIB=/opt/ohpc/pub/apps/jasper-1.900.1/lib
+export JASPERINC=/opt/ohpc/pub/apps/jasper-1.900.1/include
+export WRF_DA_CORE=0
+export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+export MCT_INCDIR=${HOME}/COAWST/MCT-LIB/include
+export MCT_LIBDIR=${HOME}/COAWST/MCT-LIB/lib
+
+script build.log
+./coawst.bash -j 10
+exit
