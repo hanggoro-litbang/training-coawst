@@ -9,10 +9,10 @@ cp -r WRF-4.2 WRFPLUS
 cd WRFPLUS
 ./clean -a
 
-#3. exporting path
+#2. exporting path
 export NETCDF=/opt/ohpc/pub/apps/netcdf-4.7.3
 
-#4. compile
+#3. compile
 ./configure wrfplus
 #pilih 18 dmpar gfortran
 ./compile wrfplus -j 10 >& compile.log &
