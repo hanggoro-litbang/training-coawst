@@ -20,6 +20,7 @@ export WRF_DIR=../WRF-4.2
 
 #4. compile
 ./configure 
+#pilih 3 dmpar gfortran
 ./compile >& compile.log &
 #check jika terdapat error pada file compile.log
 
@@ -27,5 +28,9 @@ export WRF_DIR=../WRF-4.2
 gedit configure.wps
 
 =======================================================================
-
+     57 #   Settings for Linux x86_64, gfortran    (dmpar)
+     58 #
+     59 #
+     60 COMPRESSION_LIBS    = -L/opt/ohpc/pub/apps/jasper-1.900.1/lib -ljasper -L/opt/ohpc/pub/apps/libpng-1.6.37/lib -lpng -L/opt/ohpc/pub/apps/zlib-1.2.11/lib -lz
+     61 COMPRESSION_INC     = -I/opt/ohpc/pub/apps/jasper-1.900.1/include -I/opt/ohpc/pub/apps/libpng-1.6.37/include -I/opt/ohpc/pub/apps/zlib-1.2.11/include
 =======================================================================
