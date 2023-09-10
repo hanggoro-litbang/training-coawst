@@ -1,0 +1,18 @@
+###### INSTALASI WRFPLUS ######
+#pastikan semua module sudah terload
+#ml list
+#jika tidak gunakan perintah 'ml restore coa_mod'
+#1. Copy file
+#pastikan ada di $HOME masing-masing
+cd WRF
+cp -r WRF-4.2 WRFPLUS
+cd WRFPLUS
+./clean -a
+
+#3. exporting path
+export NETCDF=/opt/ohpc/pub/apps/netcdf-4.7.3
+
+#4. compile
+./configure wrfplus
+#pilih 18 dmpar gfortran
+./compile wrfplus -j 10 >& compile.log &
