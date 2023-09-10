@@ -1,0 +1,14 @@
+###### INSTALASI WRF ######
+#pastikan semua module sudah terload
+#ml list
+#jika tidak gunakan perintah 'ml restore coa_mod'
+#1. Copy file
+#pastikan ada di $HOME masing-masing
+cp ${TRAIN_DIR}/software/COAWST_v3.7_final.zip .
+
+#2. Unzip file
+unzip COAWST_v3.7_final.zip
+ls
+mv COAWST-COAWST_v3.7_final/ COAWST
+cd COAWST
+
