@@ -8,7 +8,7 @@ mkdir Swan_only
 cd Swan_only
 mkdir input output
 cp ${HOME}/COAWST/coawst.bash .
-cp ${HOME}/COAWST/Projects/Inlet_test/Swanonly swan_only.h
+cp ${HOME}/COAWST/Projects/Inlet_test/Swanonly/inlet_test.h swan_only.h
 
 gedit coawst.bash
 
@@ -57,3 +57,6 @@ export MCT_LIBDIR=${HOME}/COAWST/MCT-LIB/lib
 script build.log
 ./coawst.bash -j 10
 exit
+
+cd ${HOME}/COAWST
+mv coawstM coawstM.swanonly
