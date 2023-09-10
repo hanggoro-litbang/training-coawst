@@ -57,3 +57,6 @@ export MCT_LIBDIR=${HOME}/COAWST/MCT-LIB/lib
 script build.log
 ./coawst.bash -j 10
 exit
+
+cd ${HOME}/COAWST
+mv coawstM coawstM.romsonly
