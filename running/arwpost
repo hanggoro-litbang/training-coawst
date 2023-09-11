@@ -1,0 +1,22 @@
+###### RUNNING ARWPOST ######
+#pastikan semua module sudah terload
+# ml list
+# jika tidak gunakan perintah 'ml restore coa_mod'
+# pastikan ada di $HOME masing-masing
+# 2. Create Working Directory
+# pastikan ada di $HOME masing-masing
+mkdir -p WDIR/arwpost
+cd WDIR/arwpost
+
+#2. Copy necessary file
+cp ${HOME}/WRF/ARWpost/namelist.ARWpost .
+ln -sf ${HOME}/WRF/ARWpost/ARWpost.exe . 
+ln –sf ${HOME}/WDIR/wrf/wrfout* .
+gedit namelist.ARWpost
+#sesuaikan dengan data berikut
+
+========================================================================
+
+========================================================================
+#4. Running
+./ARWpost.exe
