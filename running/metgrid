@@ -1,0 +1,20 @@
+###### RUNNING METGRID ######
+#pastikan semua module sudah terload
+# ml list
+# jika tidak gunakan perintah 'ml restore coa_mod'
+# pastikan ada di $HOME masing-masing
+# 2. Create Working Directory
+# pastikan ada di $HOME masing-masing
+mkdir -p WDIR/metgrid
+cd WDIR/metgrid
+
+# 2. Copy namelist
+cp ${HOME}/WDIR/ungrib/namelist.wps .
+
+#3. Copy necessary file
+ln -sf ${HOME}/WRF/WPS-4.2/metgrid/METGRID.TBL .
+ln -sf ${HOME}/WDIR/ungrib//FILE* .
+ln -sf ${HOME}/WRF/WPS-4.2/metgrid.exe
+
+#4. Running
+./metgrid.exe
