@@ -127,16 +127,17 @@ gedit job.mpi
 
 #ubah beberapa line berikut
 =================================================================================
-#!/bin/bash
-#SBATCH -J test               # Job name
-#SBATCH -o real_log.out            # Name of stdout output file (%j expands to jobId)
-#SBATCH -N 1                  # Total number of nodes requested
-#SBATCH -n 10                 # Total number of mpi tasks requested
-#SBATCH -t 01:30:00           # Run time (hh:mm:ss) - 1.5 hours
-
-# Launch MPI-based executable
-
-mpirun ./real.exe
+      1 #!/bin/bash
+      2
+      3 #SBATCH -J test               # Job name
+      4 #SBATCH -o log_real.out            # Name of stdout output file (%j expands to jobId)
+      5 #SBATCH -N 1                  # Total number of nodes requested
+      6 #SBATCH -n 10                 # Total number of mpi tasks requested
+      7 #SBATCH -t 01:30:00           # Run time (hh:mm:ss) - 1.5 hours
+      8
+      9 # Launch MPI-based executable
+     10
+     11 mpirun ./real.exe
 =================================================================================
 
 sbatch job.mpi
