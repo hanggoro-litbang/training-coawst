@@ -1,0 +1,34 @@
+###### RUNNING WRF.EXE ######
+#pastikan semua module sudah terload
+# ml list
+# jika tidak gunakan perintah 'ml restore coa_mod'
+# pastikan ada di $HOME masing-masing
+# 1. Working Directory
+# pastikan ada di $HOME masing-masing
+cd WDIR/wrf
+
+# 2. Copy necessary file
+ln -sf ${HOME}/WRF/WRF-4.2/run/RRTM* .
+ln -sf ${HOME}/WRF/WRF-4.2/run/ozone* .
+ln -sf ${HOME}/WRF/WRF-4.2/run/*.TBL .
+ln -sf ${HOME}/WRF/WRF-4.2/run/wrf.exe .
+
+# 3. Running
+gedit job.mpi
+
+#ubah beberapa line berikut
+=================================================================================
+#!/bin/bash
+#SBATCH -J test               # Job name
+#SBATCH -o wrf_log.out            # Name of stdout output file (%j expands to jobId)
+#SBATCH -N 1                  # Total number of nodes requested
+#SBATCH -n 10                 # Total number of mpi tasks requested
+#SBATCH -t 01:30:00           # Run time (hh:mm:ss) - 1.5 hours
+
+# Launch MPI-based executable
+
+mpirun ./wrf.exe
+=================================================================================
+
+sbatch job.mpi
+#submit job
