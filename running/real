@@ -9,7 +9,7 @@ mkdir -p WDIR/wrf
 cd WDIR/wrf
 
 # 2. Copy namelist
-cp ${HOME}/WDIR/geogrid/namelist.wps .
+cp ${HOME}/WRF/WRF-4.2/run/namelist.input .
 
 # 3. Copy necessary file
 ln -sf ${HOME}/WDIR/geogrid/geo_em .
