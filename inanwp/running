@@ -1,1 +1,7 @@
 ###### RUNNING INANWP ######
+#1. Ungrib
+#2. Metgrid
+#3. Real.exe
+#4. da_wrfvar
+#5. update_bc
+#6. Wrf.exe
