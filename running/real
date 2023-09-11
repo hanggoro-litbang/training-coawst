@@ -1,0 +1,21 @@
+###### RUNNING REAL.EXE ######
+#pastikan semua module sudah terload
+# ml list
+# jika tidak gunakan perintah 'ml restore coa_mod'
+# pastikan ada di $HOME masing-masing
+# 2. Create Working Directory
+# pastikan ada di $HOME masing-masing
+mkdir -p WDIR/wrf
+cd WDIR/wrf
+
+# 2. Copy namelist
+cp ${HOME}/WDIR/geogrid/namelist.wps .
+
+#3. Copy necessary file
+ln -sf ${HOME}/WRF/WPS-4.2/ungrib/Variable_Tables/Vtable.GFS ./Vtable
+ln -sf ${HOME}/WRF/WPS-4.2/link_grib.csh .
+ln -sf ${HOME}/WRF/WPS-4.2/ungrib.exe
+
+#4. Running
+./link_grib.csh ${TRAIN_DIR}/data/gfs/2023090912/gfs.t12z.pgrb2.0p25.f* 
+./ungrib.exe
