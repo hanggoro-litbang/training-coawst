@@ -19,8 +19,8 @@ gedit namelist.wps
       1 &share
       2  wrf_core             = 'ARW'
       3  max_dom              = 2
-      4  start_date           = '2023-09-09_12:00:00', '202        3-09-11_12:00:00'
-      5  end_date             = '2023-09-09_12:00:00', '202        3-09-11_12:00:00'
+      4  start_date           = '2023-09-09_12:00:00', '2023-09-09_12:00:00'
+      5  end_date             = '2023-09-11_12:00:00', '2023-09-11_12:00:00'
       6  interval_seconds     = 10800
       7  io_form_geogrid      = 2
       8  debug_level          = 0
