@@ -10,6 +10,7 @@ cd WDIR/wrf
 # 2. Copy necessary file
 ln -sf ${HOME}/WRF/WRF-4.2/run/RRTM* .
 ln -sf ${HOME}/WRF/WRF-4.2/run/ozone* .
+ln -sf ${HOME}/WRF/WRF-4.2/run/aerosol* .
 ln -sf ${HOME}/WRF/WRF-4.2/run/*.TBL .
 ln -sf ${HOME}/WRF/WRF-4.2/run/wrf.exe .
 
@@ -20,8 +21,8 @@ gedit job.mpi
 =================================================================================
       1 #!/bin/bash
       2
-      3 #SBATCH -J test               # Job name
-      4 #SBATCH -o log.out            # Name of stdout output file (%j expands to jobId)
+      3 #SBATCH -J wrf               # Job name
+      4 #SBATCH -o log_wrf.out            # Name of stdout output file (%j expands to jobId)
       5 #SBATCH -N 1                  # Total number of nodes requested
       6 #SBATCH -n 10                 # Total number of mpi tasks requested
       7 #SBATCH -t 01:30:00           # Run time (hh:mm:ss) - 1.5 hours
