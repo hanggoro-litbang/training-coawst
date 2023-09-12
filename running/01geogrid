@@ -43,7 +43,7 @@ gedit namelist.wps
      25  truelat2             = -5.820
      26  stand_lon            = 105.614
      27  geog_data_path       = '/mnt-storage1/src/GEOG'
-     28  opt_geogrid_tbl_path = '/home/trainer/WDIR/geogrid'
+     28  opt_geogrid_tbl_path = '/home/(nama user)/WDIR/geogrid'
      29 /
      30
      31 &ungrib
@@ -54,7 +54,7 @@ gedit namelist.wps
      36 &metgrid
      37  fg_name              = 'FILE'
      38  io_form_metgrid      = 2
-     39  opt_metgrid_tbl_path = '/home/trainer/WDIR/metgrid'
+     39  opt_metgrid_tbl_path = '/home/(nama user)/WDIR/metgrid'
      40 /
      41
      42
