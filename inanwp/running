@@ -14,6 +14,7 @@ ln -sf ${HOME}/WRF/WPS-4.2/ungrib.exe
 ./ungrib.exe
 
 #2. Metgrid
+ln -sf ${TRAIN_DIR}/data/inanwp/geo_em* .
 ln -sf ${HOME}/WRF/WPS-4.2/metgrid/METGRID.TBL .
 ln -sf ${HOME}/WRF/WPS-4.2/metgrid.exe
 ./metgrid.exe
