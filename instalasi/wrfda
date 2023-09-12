@@ -21,3 +21,5 @@ export WRFIO_NCD_LARGE_FILE_SUPPORT=1
 #pilih 18 dmpar gfortran
 ./compile -j 10 all_wrfvar >& compile.log &
 # wrfda v 4.3.3 should compile with single proc
+
+cp -r ${TRAIN_DIR}/data/inanwp/crtm_coeffs_2.3.0 ${HOME}/WRF/WRFDA/var/run
