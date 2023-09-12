@@ -14,7 +14,7 @@ cp ${HOME}/WDIR/ungrib/namelist.wps .
 #3. Copy necessary file
 ln -sf ${HOME}/WDIR/geogrid/geo_em* .
 ln -sf ${HOME}/WRF/WPS-4.2/metgrid/METGRID.TBL .
-ln -sf ${HOME}/WDIR/ungrib//FILE* .
+ln -sf ${HOME}/WDIR/ungrib/FILE* .
 ln -sf ${HOME}/WRF/WPS-4.2/metgrid.exe
 
 #4. Running
