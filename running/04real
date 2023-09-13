@@ -12,7 +12,7 @@ cd WDIR/wrf
 cp ${HOME}/WRF/WRF-4.2/run/namelist.input .
 
 # 3. Copy necessary file
-ln -sf ${HOME}/WDIR/geogrid/geo_em .
+cp ${HOME}/WDIR/geogrid/geo_em .
 ln -sf ${HOME}/WDIR/metgrid/met_em* .
 ln -sf ${HOME}/WRF/WRF-4.2/run/real.exe .
 cp ${HOME}/WRF/WRF-4.2/run/namelist.input .
