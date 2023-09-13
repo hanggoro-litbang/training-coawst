@@ -1,0 +1,7 @@
+####### FIRST LOGIN ##########
+ssh -p (port_number) (nama_user)@(ip_adress)
+# port number ?
+# nama user ?
+# ip address ?
+# anda diminta memasukan password default
+# setelah itu anda diminta untuk memasukan password baru (2x)
