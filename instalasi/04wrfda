@@ -26,4 +26,5 @@ export WRFIO_NCD_LARGE_FILE_SUPPORT=1
 cp -r ${TRAIN_DIR}/data/inanwp/crtm_coeffs_2.3.0 ${HOME}/WRF/WRFDA/var/run
 
 #5 Check created binary
-ls -l var/build/*exe var/obsproc/src/obsproc.exe | wc -l
+ls -l var/build/*exe  | wc -l
+ls -l var/obsproc/src/obsproc.exe | wc -l
