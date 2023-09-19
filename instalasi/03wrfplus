@@ -16,3 +16,5 @@ export NETCDF=/opt/ohpc/pub/apps/netcdf-4.7.3
 ./configure wrfplus
 #pilih 18 dmpar gfortran
 ./compile wrfplus -j 10 >& compile.log &
+#4 check created binary
+ls main/wrfplus.exe
