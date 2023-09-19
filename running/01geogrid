@@ -59,7 +59,7 @@ gedit namelist.wps
      41
      42
 =========================================================================
-(line, 2,3,4,5,19,20,27,28,33,37,39)
+(line, 2,3,4,5,18,19,20,27,28,33,37,39)
 #3 .Prepare necessary files
 ln -sf ${HOME}/WRF/WPS-4.2/geogrid/GEOGRID.TBL.ARW ./GEOGRID.TBL
 ln -sf ${HOME}/WRF/WPS-4.2/geogrid/geogrid.exe .
