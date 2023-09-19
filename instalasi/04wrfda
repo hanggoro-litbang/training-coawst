@@ -22,4 +22,8 @@ export WRFIO_NCD_LARGE_FILE_SUPPORT=1
 ./compile -j 10 all_wrfvar >& compile.log &
 # wrfda v 4.3.3 should compile with single proc
 
+#4 Copy folder crtm
 cp -r ${TRAIN_DIR}/data/inanwp/crtm_coeffs_2.3.0 ${HOME}/WRF/WRFDA/var/run
+
+#5 Check created binary
+ls -l var/build/*exe var/obsproc/src/obsproc.exe | wc -l
