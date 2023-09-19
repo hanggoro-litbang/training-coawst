@@ -14,7 +14,7 @@ cd COAWST
 
 #3. Compile MCT-LIB
 mkdir MCT-LIB
-cd Lib/MCT
+cd Lib/MCT-LIB
 export NETCDF=/opt/ohpc/pub/apps/netcdf-4.7.3
 ./configure --prefix=${HOME}/COAWST/MCT-LIB F90=gfortran
 make
