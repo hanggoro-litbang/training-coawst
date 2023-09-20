@@ -21,7 +21,7 @@ make
 make install
 ls ${HOME}/COAWST/MCT-LIB
 
-#4. Compile SCRIPT
+#4. Compile SCRIP
 cd ${HOME}/COAWST/Lib/SCRIP_COAWST
 gedit makefile
 # change the compiler option from ifort to gfortran
