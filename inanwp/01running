@@ -76,7 +76,6 @@ ln -sf ${HOME}/WRF/WRFDA/var/run/VARBC.in  ./VARBC.in
 cp temp/wrfinput_d01  ./fg
 ln -sf ${HOME}/WRF/WRFDA/run/LANDUSE.TBL ./LANDUSE.TBL
 ln -sf ${HOME}/WRF/WRFDA/var/build/da_wrfvar.exe ./da_wrfvar.exe
-cp ${TRAIN_DIR}/data/inanwp/namelist.input.da02 ./namelist.input
 cp /opt/ohpc/pub/examples/slurm/job.mpi .
 gedit job.mpi
 
