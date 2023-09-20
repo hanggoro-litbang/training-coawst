@@ -57,6 +57,8 @@ gedit ${HOME}/COAWST/Compilers/Linux-gfortran.mk
 ================================================================================
 #hapus  -ftree-loop-linear  pada line 183
 
+make
+
 # Compile COAWST (Sandy Case)
 cd ${HOME}/COAWST
 
